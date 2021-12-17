@@ -1,7 +1,6 @@
 ﻿using System;
-using System.ComponentModel;
+using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace MobileSisCliente.Views
 {
@@ -10,6 +9,12 @@ namespace MobileSisCliente.Views
         public AboutPage()
         {
             InitializeComponent();
+        }
+
+        async void OnButtonClicked(object sender, EventArgs e)
+        {
+            // Launch the specified URL in the system browser.
+            await Launcher.OpenAsync("https://aka.ms/xamarin-quickstart");
         }
     }
 }

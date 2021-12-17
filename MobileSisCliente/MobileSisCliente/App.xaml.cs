@@ -1,8 +1,4 @@
-﻿using MobileSisCliente.Services;
-using MobileSisCliente.Views;
-using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace MobileSisCliente
 {
@@ -12,8 +8,6 @@ namespace MobileSisCliente
         public App()
         {
             InitializeComponent();
-
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 
