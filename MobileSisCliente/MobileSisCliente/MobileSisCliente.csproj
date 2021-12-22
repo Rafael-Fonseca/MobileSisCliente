@@ -6,18 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Models\**" />
-    <Compile Remove="Services\**" />
-    <Compile Remove="ViewModels\**" />
-    <EmbeddedResource Remove="Models\**" />
-    <EmbeddedResource Remove="Services\**" />
-    <EmbeddedResource Remove="ViewModels\**" />
-    <None Remove="Models\**" />
-    <None Remove="Services\**" />
-    <None Remove="ViewModels\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Remove="Views\ItemDetailPage.xaml.cs" />
     <Compile Remove="Views\ItemsPage.xaml.cs" />
     <Compile Remove="Views\LoginPage.xaml.cs" />
@@ -36,15 +24,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\AboutPage.xaml">
+    <Compile Update="Views\ClientsPage.xaml.cs">
+      <DependentUpon>ClientsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ClientEntryPage.xaml.cs">
+      <DependentUpon>ClientEntryPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\ClientsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\IndexPage.xaml">
+    <EmbeddedResource Update="Views\ClientEntryPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

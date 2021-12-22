@@ -6,12 +6,12 @@
 
     <TabBar>
         <!-- O primeiro nessa lista é a página inicial, aparentemente é a hierarquia da qual a doc fala -->
-        <ShellContent Title="Clientes"
-                      Icon="icon_feed.png"
-                      ContentTemplate="{DataTemplate views:IndexPage}" />
-        <ShellContent Title="Sobre"
+        <ShellContent Title="Consultar Clientes"
                       Icon="icon_about.png"
-                      ContentTemplate="{DataTemplate views:AboutPage}" />
+                      ContentTemplate="{DataTemplate views:ClientsPage}" />
+        <ShellContent Title="Adicionar Cliente"
+                      Icon="icon_feed.png"
+                      ContentTemplate="{DataTemplate views:ClientEntryPage}" />
     </TabBar>
     
 </Shell>
