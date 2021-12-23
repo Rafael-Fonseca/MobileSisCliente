@@ -7,6 +7,8 @@ namespace MobileSisCliente
         public AppShell()
         {
             InitializeComponent();
+            Routing.RegisterRoute("update", typeof(Views.ClientUpdatePage));
+            Routing.RegisterRoute("clients", typeof(Views.ClientsPage));
         }
 
     }

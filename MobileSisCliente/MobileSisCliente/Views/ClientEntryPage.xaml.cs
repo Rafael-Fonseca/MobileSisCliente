@@ -1,5 +1,6 @@
-﻿using System;
-using System.IO;
+﻿using MobileSisCliente.Services;
+using MobileSisCliente.ViewModels;
+using System;
 using Xamarin.Forms;
 
 namespace MobileSisCliente.Views
@@ -11,14 +12,17 @@ namespace MobileSisCliente.Views
             InitializeComponent();
         }
 
-        void OnSaveButtonClicked(object sender, EventArgs e)
+        async void OnAddButtonClicked(object sender, EventArgs e)
         {
-            // Save the file.
+            var requester = new HttpService();
+            var context = (ClientEntryViewModel)BindingContext;
+
+            await new HttpService().SaveClientAsync(context.Client, true);
+            //TODO: ALERT Resultado
+            await Shell.Current.GoToAsync("clients");
+
+
         }
 
-        void OnDeleteButtonClicked(object sender, EventArgs e)
-        {
-            // Delete the file.
-        }
     }
 }
