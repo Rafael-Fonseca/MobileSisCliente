@@ -1,18 +1,14 @@
-﻿using MobileSisCliente.ViewModels;
-using MobileSisCliente.Views;
-using System;
-using System.Collections.Generic;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace MobileSisCliente
 {
-    public partial class AppShell : Xamarin.Forms.Shell
+    public partial class AppShell : Shell
     {
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+            Routing.RegisterRoute("update", typeof(Views.ClientUpdatePage));
+            Routing.RegisterRoute("clients", typeof(Views.ClientsPage));
         }
 
     }
